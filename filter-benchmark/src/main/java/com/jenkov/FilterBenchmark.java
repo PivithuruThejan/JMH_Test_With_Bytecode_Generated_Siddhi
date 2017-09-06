@@ -32,20 +32,23 @@
 package com.jenkov;
 
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
 import org.wso2.siddhi.core.SiddhiAppRuntime;
 import org.wso2.siddhi.core.SiddhiManager;
+import org.wso2.siddhi.core.event.Event;
+import org.wso2.siddhi.core.query.output.callback.QueryCallback;
 import org.wso2.siddhi.core.stream.input.InputHandler;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * tests performance of Siddhi with byte code
+ * Tests performance of "Siddhi" with byte code.
  */
 public class FilterBenchmark {
 
     /**
-     * inserts 11 million events to Siddhi
+     * Inserts 11 million events to "Siddhi" optimized by JIT compilation.
      *
      * @param state
      * @throws InterruptedException
@@ -55,9 +58,11 @@ public class FilterBenchmark {
      * @throws IllegalAccessException
      */
     @Benchmark
-    public void testMethod(StartUpState state) throws InterruptedException, InvocationTargetException,
+    @BenchmarkMode(Mode.All)
+    public void testMethod(StartUpState state, Blackhole blackhole) throws InterruptedException, InvocationTargetException,
             InstantiationException, IOException, IllegalAccessException {
-        for (int i = 1; i <= state.COUNT; i++) {
+        state.CHECK = 0;
+        for (int i = 0; i < state.COUNT; i++) {
             state.inputHandler.send(state.o1);
             state.inputHandler.send(state.o2);
             state.inputHandler.send(state.o3);
@@ -69,24 +74,24 @@ public class FilterBenchmark {
             state.inputHandler.send(state.o9);
             state.inputHandler.send(state.o10);
             state.inputHandler.send(state.o11);
-
         }
 
+        blackhole.consume(state.CHECK);
     }
 
     /**
-     * handles opeations that need not to be tested.
+     * handles operations that need not to be tested.
      */
     @State(Scope.Benchmark)
     public static class StartUpState {
         private static final int COUNT = 1000000;
+        public static int CHECK = 0;
         public String definition = "@config(async = 'true') define stream players(playerName string,country string," +
                 "TestAverage float,TestStrikeRate float,ODIAverage float,ODIStrikeRate float,T20Average float," +
                 "T20StrikeRate float,BattingStyle string);";
-        public String query = "@info(name = 'query1') from players[TestAverage>45.0 and (ODIAverage>40.0 or ODIStrikeRate>100.0) " +
-                "and not(T20Average<10.0 or T20StrikeRate>150.0) or (ODIAverage<35.0 or T20StrikeRate>130.0 and " +
-                "not(TestStrikeRate < 55.0))] select playerName, BattingStyle "
-                + "insert into sqaud;";
+        public String query = "@info(name = 'query1') from players[(TestAverage>45.0 and TestStrikeRate>45.0 or ODIAverage>45.0)" +
+                " and (ODIAverage>40.0 or ODIStrikeRate>100.0) and not(T20Average<10.0 or T20StrikeRate>150.0 and TestStrikeRate>65.0)" +
+                " or (ODIAverage<35.0 or T20StrikeRate>130.0 and not(TestStrikeRate < 55.0))] select playerName, BattingStyle insert into sqaud;";
         public SiddhiManager siddhiManager = new SiddhiManager();
         public SiddhiAppRuntime siddhiAppRuntime;
         public InputHandler inputHandler;
@@ -105,6 +110,13 @@ public class FilterBenchmark {
         public StartUpState() {
             try {
                 siddhiAppRuntime = siddhiManager.createSiddhiAppRuntime(definition + query);
+                siddhiAppRuntime.addCallback("query1", new QueryCallback() {
+                    @Override
+                    public void receive(long timeStamp, Event[] inEvents, Event[] removeEvents) {
+                        CHECK++;
+                    }
+
+                });
                 inputHandler = siddhiAppRuntime.getInputHandler("players");
             } catch (InstantiationException e) {
                 e.printStackTrace();
@@ -113,5 +125,4 @@ public class FilterBenchmark {
             }
         }
     }
-
 }

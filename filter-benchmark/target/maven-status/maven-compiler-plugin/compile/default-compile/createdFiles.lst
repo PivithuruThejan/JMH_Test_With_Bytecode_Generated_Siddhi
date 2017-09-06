@@ -3,6 +3,7 @@ com/jenkov/generated/FilterBenchmark_StartUpState_jmhType_B2.class
 com/jenkov/generated/FilterBenchmark_jmhType_B2.class
 com/jenkov/generated/FilterBenchmark_testMethod_jmhTest.class
 com/jenkov/generated/FilterBenchmark_jmhType_B1.class
+com/jenkov/FilterBenchmark$StartUpState$1.class
 com/jenkov/generated/FilterBenchmark_StartUpState_jmhType_B1.class
 com/jenkov/generated/FilterBenchmark_jmhType_B3.class
 META-INF/BenchmarkList

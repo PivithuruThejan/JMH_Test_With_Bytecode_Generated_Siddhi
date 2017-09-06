@@ -1,0 +1,15 @@
+Benchmark,Mode,Threads,Samples,Score,Score Error (99.9%),Unit
+com.jenkov.FilterBenchmark.testMethod,thrpt,1,200,0.519032,0.003961,ops/s
+com.jenkov.FilterBenchmark.testMethod,avgt,1,200,1.89624,0.009858,s/op
+com.jenkov.FilterBenchmark.testMethod,sample,1,200,1.951987,0.017847,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.00,sample,1,1,1.811939,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.50,sample,1,1,1.939866,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.90,sample,1,1,2.048918,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.95,sample,1,1,2.101241,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.99,sample,1,1,2.21023,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.999,sample,1,1,2.214593,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p0.9999,sample,1,1,2.214593,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod:testMethod·p1.00,sample,1,1,2.214593,NaN,s/op
+com.jenkov.FilterBenchmark.testMethod,ss,1,10,2.383692,0.119321,s/op
+,,,,,,
+TestAverage>45.0 and (ODIAverage>40.0 or ODIStrikeRate>100.0) and not(T20Average<10.0 or T20StrikeRate>150.0) or (ODIAverage<35.0 or T20StrikeRate>130.0 and not(TestStrikeRate < 55.0)),,,,,,
