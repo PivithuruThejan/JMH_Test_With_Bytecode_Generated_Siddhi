@@ -12,25 +12,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FilterBenchmark.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jenkov/FilterBenchmark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="93" column="85" lean-forward="false" selection-start-line="93" selection-start-column="85" selection-end-line="93" selection-end-column="85" />
-              <folding>
-                <element signature="e#0#6361#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jmh-result.csv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jmh-result.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmh-result.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterBenchmark.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/filterTest/FilterBenchmark.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#6365#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,6 +55,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/jmh-result.csv" />
         <option value="$PROJECT_DIR$/src/main/java/com/jenkov/FilterBenchmark.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/filterTest/FilterBenchmark.java" />
       </list>
     </option>
   </component>
@@ -72,7 +72,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
@@ -125,7 +125,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jenkov" type="462c0819:PsiDirectoryNode" />
+              <item name="filterTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -142,8 +142,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="BY&#9;FILE&#9;jar:///home/pivithuru/.m2/repository/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/ByteCodeHelper.class&#10;ByteCode&#9;PSI&#9;JAVA://org.wso2.siddhi.core.query.processor.filter.ByteCodeHelper&#10;Test&#9;FILE&#9;jar:///home/pivithuru/.m2/repository/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/Test3.class&#10;filterproce&#9;FILE&#9;jar:///home/pivithuru/.m2/repository/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/FilterProcessor.class" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Normal_Filter_Test_JMH/normal-Siddhi-Filter-benchmark" />
+    <property name="SearchEverywhereHistoryKey" value="ByteCode&#9;PSI&#9;JAVA://org.wso2.siddhi.core.query.processor.filter.ByteCodeEmitter&#10;BY&#9;FILE&#9;jar:///home/pivithuru/.m2/repository/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/ByteCodeHelper.class&#10;Test&#9;FILE&#9;jar:///home/pivithuru/.m2/repository/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/Test3.class&#10;filterproce&#9;FILE&#9;jar:///home/pivithuru/.m2/repository/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/FilterProcessor.class" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -260,16 +260,15 @@
       <workItem from="1504245106891" duration="1971000" />
       <workItem from="1504257561036" duration="4127000" />
       <workItem from="1504674382316" duration="7907000" />
-      <workItem from="1504760586708" duration="603000" />
+      <workItem from="1504760586708" duration="1636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31094000" />
+    <option name="totallyTimeSpent" value="32127000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -279,7 +278,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34763947" sideWeight="0.5041459" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34763947" sideWeight="0.49585405" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34763947" sideWeight="0.49585405" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27086788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -317,10 +316,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -328,10 +324,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -354,10 +347,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -373,10 +363,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -392,10 +379,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -411,10 +395,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -430,10 +411,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -449,10 +427,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -506,10 +481,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="93" column="85" lean-forward="false" selection-start-line="93" selection-start-column="85" selection-end-line="93" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#6361#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -518,6 +490,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/siddhi/siddhi-core/4.0.0-M25-SNAPSHOT/siddhi-core-4.0.0-M25-SNAPSHOT.jar!/org/wso2/siddhi/core/query/processor/filter/ByteCodeEmitter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/filterTest/FilterBenchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#6365#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
